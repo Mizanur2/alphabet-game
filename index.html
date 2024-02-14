@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet Game</title>
+
+    <!-- daisy ui cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center bg-contain">
+        <section id="start-game" class="space-y-3   min-h-screen flex flex-col justify-center items-center
+        ">
+            <h1 class="text-6xl text-white text-center font-extrabold uppercase">alphabet game
+            </h1>
+            <p class="text-2xl text-center capitalize text-white">unleash your keyboard kung fu. press enter to
+                play</p>
+            <button onclick="play()" class="btn btn-accent">Play Now</button>
+        </section>
+
+
+        <section id="game-panel" class="hidden">
+
+            <div class="screen flex justify-center mb-10 pt-10">
+                <div
+                    class="artboard artboard-horizontal phone-6 border-[20px] rounded-lg bg-white opacity-70 border-[#010313CC] text-white">
+
+                    <div class="flex justify-center">
+                        <p class="bg-black pb-1 px-8 rounded-b-md">Don't watch keyboard while playing...</p>
+                    </div>
+                    <p id="game-display" class="text-8xl text-black text-center pt-14 font-bold uppercase">Y</p>
+                </div>
+
+            </div>
+            <div class="text-2xl">
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="q" class="kbd">q</kbd>
+                    <kbd id="w" class="kbd">w</kbd>
+                    <kbd id="e" class="kbd">e</kbd>
+                    <kbd id="r" class="kbd">r</kbd>
+                    <kbd id="t" class="kbd">t</kbd>
+                    <kbd id="y" class="kbd">y</kbd>
+                    <kbd id="u" class="kbd">u</kbd>
+                    <kbd id="i" class="kbd">i</kbd>
+                    <kbd id="o" class="kbd">o</kbd>
+                    <kbd id="p" class="kbd">p</kbd>
+                </div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="a" class="kbd">a</kbd>
+                    <kbd id="s" class="kbd">s</kbd>
+                    <kbd id="d" class="kbd">d</kbd>
+                    <kbd id="f" class="kbd">f</kbd>
+                    <kbd id="g" class="kbd">g</kbd>
+                    <kbd id="h" class="kbd">h</kbd>
+                    <kbd id="j" class="kbd">j</kbd>
+                    <kbd id="k" class="kbd">k</kbd>
+                    <kbd id="l" class="kbd">l</kbd>
+                </div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="z" class="kbd">z</kbd>
+                    <kbd id="x" class="kbd">x</kbd>
+                    <kbd id="c" class="kbd">c</kbd>
+                    <kbd id="v" class="kbd">v</kbd>
+                    <kbd id="b" class="kbd">b</kbd>
+                    <kbd id="n" class="kbd">n</kbd>
+                    <kbd id="m" class="kbd">m</kbd>
+                    <kbd id="/" class="kbd">/</kbd>
+                </div>
+            </div>
+
+            <div class="bottom-part flex justify-between px-12">
+                <button class="btn">
+                    Life
+                    <img src="images/heart.png" alt="">
+                </button>
+                <button class="btn">
+                    Score
+                    <img src="images/score.png" alt="">
+                </button>
+            </div>
+
+        </section>
+
+
+        <section class="game-end hidden flex justify-center items-center min-h-screen">
+            <div class="card w-96 bg-[#ffffff33]">
+                <div class="card-body items-center text-center text-white">
+                    <h2 class="card-title text-4xl font-bold ">Score: <span>14</span>!</h2>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary bg-white">Play Again</button>
+                    </div>
+                    <p>practice will make you pro</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
